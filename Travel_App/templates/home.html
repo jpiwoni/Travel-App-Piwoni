@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destination Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Find Your Ideal Vacation Destination</h1>
+    
+    <!-- Add the globe image -->
+    <img src="{{ url_for('static', filename='globes.png') }}" alt="Globe Image" class="globe-image">
+    
+    <form action="{{ url_for('results') }}" method="POST">
+        <label for="location">Enter Location:</label>
+        <input type="text" id="location" name="location" required>
+        <button type="submit">Check Weather</button>
+    </form>
+</body>
+</html>
